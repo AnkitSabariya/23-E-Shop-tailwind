@@ -1,0 +1,737 @@
+<!doctype html>
+<html id="html-element">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>23 E-Shop</title>
+  <link rel="shortcut icon" href=".//assets/main4.png" type="image/x-icon">
+
+  <!-- remix icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+    integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- swiper js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Aos Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<body class="font-sans bg-white dark:bg-[#111827]">
+  <div class="container mx-auto  w-full px-4 sm:px-14 py-2">
+    <header>
+      <!-- navbar -->
+      <nav class="flex justify-between items-center w-full py-4">
+        <div class="flex items-center gap-10">
+          <h1 class="text-2xl uppercase font-semibold sm:text-3xl text-[#f42c37] tracking-widest">eshop</h1>
+          <a href="#"
+            class="hidden lg:block font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">Home</a>
+          <a href="#"
+            class="hidden lg:block font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">Shop</a>
+          <a href="#"
+            class="hidden lg:block font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">About</a>
+          <a href="#"
+            class="hidden lg:block font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">Blogs</a>
+          <a href="#"
+            class="hidden lg:block font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">Quick
+            Links</a>
+        </div>
+        <div class="relative flex gap-8 items-center">
+          <div class="group">
+            <input type="text" placeholder="Search"
+              class="rounded-3xl px-[0.75rem] py-[0.25rem] absolute right-[82%] w-0 group-hover:w-[300px] bg-transparent dark:bg-transparent group-hover:bg-white group-hover:dark:bg-slate-800 hidden lg:block transition-all duration-300 group-hover:border border-[#6B7280] focus:outline-none text-black dark:text-white">
+
+            <i
+              class="ri-search-line cursor-pointer text-[#4B5563] dark:text-[#9CA3AF]  hover:text-red-600 text-[20px] relative pt-[0.13rem] hidden md:block"></i>
+          </div>
+
+          <div class="cart relative">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+              class="text-xl text-gray-600 dark:text-gray-400" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
+              </path>
+            </svg>
+            <div
+              class="w-4 h-4 bg-red-500 text-white rounded-full absolute left-[14px] bottom-[17px] text-[12px] flex items-center justify-center">
+              4</div>
+          </div>
+
+          <div class="relative flex items-center">
+            <img src="./assets/light-mode-button-X4OXHFfW.png" alt="Dark Mode" role="button"
+              aria-label="Enable Dark Mode" class="w-12 h-6 cursor-pointer" id="dark-mode-btn">
+            <img src="./assets/nigtmode.png" alt="Light Mode" role="button" aria-label="Enable Light Mode"
+              class="w-12 h-6 cursor-pointer hidden" id="light-mode-btn">
+
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <!-- hero section -->
+  <div class="container mx-auto px-4 w-full sm:px-14 ">
+    <section
+      class=" rounded-3xl  w-full min-h-[550px] sm:min-h-[650px]  flex justify-center items-center bg-gray-200 dark:bg-[#111827] dark:bg-gradient-to-l from-slate-800">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- swiper slide 1 -->
+          <div class="swiper-slide" style="width: 288px;" role="group" aria-label="1 / 3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 py-8 sm:py-0">
+              <div
+                class="left flex flex-col  justify-center gap-4 sm:pl-16 pt-16 sm:pt-0  order-2 sm:order-1 text-center sm:text-left">
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-2xl sm:text-6xl lg:text-2xl text-black dark:text-white font-bold">Beats Solo
+                </h1>
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-5xl sm:text-6xl lg:text-7xl font-bold text-black dark:text-white">Wireless</h1>
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-[45px] uppercase text-white dark:text-white/5 sm:text-[80px] md:text-8xl font-bold xl:text-[150px]">
+                  Headphone</h1>
+                <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="300">
+                  <button
+                    class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Shop
+                    By Category</button>
+                </div>
+              </div>
+              <div class="order-1 sm:order-2">
+                <div>
+                  <img
+                    class="right w-[260px]  aos-init sm:w-[480px] h-[260px]  sm:h-[480px] sm:scale-105 lg:scale-120 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]"
+                    data-aos="zoom-in" data-aos-once="true" data-aos-duration="500" data-aos-delay="300"
+                    src="./assets/hero.png" alt="" title="headphone">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- swiper slide 2 -->
+          <div class="swiper-slide" style="width: 288px;" role="group">
+            <div class="grid grid-cols-1 sm:grid-cols-2 py-8 sm:py-0">
+              <div
+                class="left flex flex-col  justify-center gap-4 sm:pl-16 pt-16 sm:pt-0  order-2 sm:order-1 text-center sm:text-left">
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" data-aos-delay="300"
+                  class="aos-init  text-2xl sm:text-6xl lg:text-2xl text-black dark:text-white font-bold">Beats Solo
+                </h1>
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-5xl sm:text-6xl lg:text-7xl font-bold text-black dark:text-white">Wireless</h1>
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-5xl uppercase text-white dark:text-white/5 sm:text-[80px] md:text-8xl font-bold xl:text-[150px]">
+                  virtual</h1>
+                <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="300">
+                  <button
+                    class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Shop
+                    By Category</button>
+                </div>
+              </div>
+              <div class="order-1 sm:order-2">
+                <div>
+                  <img
+                    class="rightw-[230px]  aos-init sm:w-[480px] h-[230px]  sm:h-[480px] sm:scale-105 lg:scale-120 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]"
+                    data-aos="zoom-in" data-aos-once="true" data-aos-duration="500" data-aos-delay="300" width="100%"
+                    height="100%" src="./assets/hero2.png" alt="" title="headphone">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- swiper slide 3 -->
+          <div class="swiper-slide" style="width: 288px;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 py-8 sm:py-0">
+              <div
+                class="left flex flex-col  justify-center gap-4 sm:pl-16 pt-12 sm:pt-0  order-2 sm:order-1 text-center sm:text-left">
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-2xl sm:text-6xl lg:text-2xl text-black dark:text-white font-bold">Beats Solo
+                </h1>
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-5xl sm:text-6xl lg:text-7xl font-bold text-black dark:text-white">Wireless</h1>
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true"
+                  class="aos-init  text-5xl uppercase text-white dark:text-white/5 sm:text-[80px] md:text-8xl font-bold xl:text-[150px]">
+                  laptops</h1>
+                <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="300">
+                  <button
+                    class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Shop
+                    By Category</button>
+                </div>
+              </div>
+              <div class="order-1 sm:order-2">
+                <div>
+                  <img
+                    class="right w-[260px]  aos-init sm:w-[480px] h-[260px]  sm:h-[480px] sm:scale-105 lg:scale-120 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)]"
+                    data-aos="zoom-in" data-aos-once="true" data-aos-duration="500" data-aos-delay="300"
+                    src="./assets/hero3.png" alt="" title="headphone">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- main section -->
+  <div class="container mx-auto w-full px-4 sm:px-14 my-8">
+    <!-- first grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300"
+        class="py-10 pl-5 bg-gradient-to-br from-black/90 to-black/70 text-white rounded-3xl relative h-[320px] flex items-end overflow-hidden">
+        <div class="mb-4" data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+          <p class="mb-[2px] text-gray-400">Enjoy</p>
+          <p class="text-2xl font-semibold mb-[2px]">With</p>
+          <p class="text-4xl xl:text-5xl font-bold opacity-20 mb-2">Earphone</p>
+          <button
+            class="bg-[#F42C37] text-white flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">
+            Browse
+          </button>
+        </div>
+        <img src="./assets/main1.png" alt="" class="w-[320px] absolute bottom-0" data-aos="zoom-in" data-aos-once="true"
+          data-aos-duration="800" data-aos-delay="700">
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300"
+        class="py-10 pl-5 bg-gradient-to-br bg-[#F1BD2E]  text-white rounded-3xl relative h-[320px] flex items-end">
+        <div class="mb-4" data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+          <p class="mb-[2px] text-white">Enjoy</p>
+          <p class="text-2xl font-semibold mb-[2px]">With</p>
+          <p class="text-4xl xl:text-5xl font-bold opacity-20 mb-2">Earphone</p>
+          <button
+            class="bg-white text-[#F1BD2E] flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">
+            Browse
+          </button>
+        </div>
+        <img src="./assets/main2.png" alt="" class="w-[320px] absolute -right-4 lg:top-[40px]" data-aos="zoom-in"
+          data-aos-once="true" data-aos-duration="800" data-aos-delay="700">
+
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300"
+        class="py-10 pl-5 bg-gradient-to-br bg-[#EB2B36] sm:col-span-2  text-white rounded-3xl relative h-[320px] flex items-end">
+        <div class="mb-4" data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+          <p class="mb-[2px] text-white">Enjoy</p>
+          <p class="text-2xl font-semibold mb-[2px]">With</p>
+          <p class="text-4xl xl:text-5xl font-bold opacity-20 mb-2">Earphone</p>
+          <button
+            class="bg-white text-[#EB2B36] flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">
+            Browse
+          </button>
+        </div>
+        <img src="./assets/main3.png" alt="" class="w-[250px] absolute  -right-0" data-aos="zoom-in"
+          data-aos-once="true" data-aos-duration="800" data-aos-delay="700">
+      </div>
+    </div>
+    <!-- second grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  my-16">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300"
+        class="sm:col-span-2 py-10 pl-5 bg-gradient-to-br from-gray-400/90 to-gray-100 text-white rounded-3xl relative h-[320px] flex items-end">
+        <div class="mb-4" data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+          <p class="mb-[2px] text-white">Enjoy</p>
+          <p class="text-2xl font-semibold mb-[2px]">With</p>
+          <p class="text-4xl xl:text-5xl font-bold opacity-20 mb-2">Laptop</p>
+          <button
+            class="bg-[#F42C37] text-white flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">
+            Browse
+          </button>
+        </div>
+        <img src="./assets/main4.png" alt="" class="w-[250px] absolute  -right-0" data-aos="zoom-in"
+          data-aos-once="true" data-aos-duration="800" data-aos-delay="700">
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300"
+        class="py-10 pl-5 bg-gradient-to-br bg-[#2BBA68] text-white rounded-3xl relative h-[320px] flex items-start overflow-hidden">
+        <div class="mb-4" data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+          <p class="mb-[2px] text-white">Enjoy</p>
+          <p class="text-2xl font-semibold mb-[2px]">With</p>
+          <p class="text-4xl xl:text-5xl font-bold opacity-20 mb-2">Earphone</p>
+          <button
+            class="bg-white text-[#2BBA68] flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">
+            Browse
+          </button>
+        </div>
+        <img src="./assets/hero2.png" alt="" class="w-[320px] absolute bottom-0" data-aos="zoom-in" data-aos-once="true"
+          data-aos-duration="1000" data-aos-delay="700">
+
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="300"
+        class="py-10 pl-5 bg-gradient-to-br bg-[#1472EC] text-white rounded-3xl relative h-[320px] flex items-start">
+        <div class="mb-4" data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+          <p class="mb-[2px] text-white">Enjoy</p>
+          <p class="text-2xl font-semibold mb-[2px]">With</p>
+          <p class="text-4xl xl:text-5xl font-bold opacity-20 mb-2">Gadget</p>
+          <button
+            class="bg-white text-[#1472EC] flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">
+            Browse
+          </button>
+        </div>
+        <img src="./assets/main6.png" alt="" class="w-[200px] absolute bottom-0 right-0" data-aos="zoom-in"
+          data-aos-once="true" data-aos-duration="800" data-aos-delay="700">
+      </div>
+    </div>
+  </div>
+  <!-- service section -->
+  <div>
+    <div class="container mx-auto w-full px-4 sm:px-14">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8" *{ data-aos="fade-up" data-aos-once="true"
+        data-aos-duration="800" data-aos-delay="700" }>
+        <div class="flex flex-col items-start sm:flex-row gap-4"><svg stroke="currentColor" fill="currentColor"
+            data-aos="zoom-in-right" data-aos-once="true" data-aos-duration="800" data-aos-delay="800" stroke-width="0"
+            viewBox="0 0 640 512" class="text-4xl md:text-5xl text-[#F42C37]" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M544 192h-16L419.22 56.02A64.025 64.025 0 0 0 369.24 32H155.33c-26.17 0-49.7 15.93-59.42 40.23L48 194.26C20.44 201.4 0 226.21 0 256v112c0 8.84 7.16 16 16 16h48c0 53.02 42.98 96 96 96s96-42.98 96-96h128c0 53.02 42.98 96 96 96s96-42.98 96-96h48c8.84 0 16-7.16 16-16v-80c0-53.02-42.98-96-96-96zM160 432c-26.47 0-48-21.53-48-48s21.53-48 48-48 48 21.53 48 48-21.53 48-48 48zm72-240H116.93l38.4-96H232v96zm48 0V96h89.24l76.8 96H280zm200 240c-26.47 0-48-21.53-48-48s21.53-48 48-48 48 21.53 48 48-21.53 48-48 48z">
+            </path>
+          </svg>
+          <div>
+            <h1 class="lg:text-xl font-bold text-black dark:text-white ">Free Shipping</h1>
+            <h1 class="text-gray-400 text-sm">Free Shipping On All Order</h1>
+          </div>
+        </div>
+        <div class="flex flex-col items-start sm:flex-row gap-4"><svg stroke="currentColor" fill="currentColor"
+            data-aos="flip-left" data-aos-once="true" data-aos-duration="800" data-aos-delay="800" stroke-width="0"
+            viewBox="0 0 512 512" class="text-4xl md:text-5xl text-[#F42C37]" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+            </path>
+          </svg>
+          <div>
+            <h1 class="lg:text-xl font-bold text-black dark:text-white">Safe Money </h1>
+            <h1 class="text-gray-400 text-sm">30 Days Money Back</h1>
+          </div>
+        </div>
+        <div class="flex flex-col items-start sm:flex-row gap-4"><svg stroke="currentColor" fill="currentColor"
+            data-aos="flip-right" data-aos-once="true" data-aos-duration="800" data-aos-delay="800" stroke-width="0"
+            viewBox="0 0 512 512" class="text-4xl md:text-5xl text-[#F42C37]" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
+            </path>
+          </svg>
+          <div>
+            <h1 class="lg:text-xl font-bold text-black dark:text-white">Secure Payment</h1>
+            <h1 class="text-gray-400 text-sm">All Payment Secure</h1>
+          </div>
+        </div>
+        <div class="flex flex-col items-start sm:flex-row gap-4"><svg stroke="currentColor" fill="currentColor"
+            data-aos="fade-down" data-aos-once="true" data-aos-duration="800" data-aos-delay="800" stroke-width="0"
+            viewBox="0 0 512 512" class="text-4xl md:text-5xl text-[#F42C37]" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M160 288h-16c-35.35 0-64 28.7-64 64.12v63.76c0 35.41 28.65 64.12 64 64.12h16c17.67 0 32-14.36 32-32.06V320.06c0-17.71-14.33-32.06-32-32.06zm208 0h-16c-17.67 0-32 14.35-32 32.06v127.88c0 17.7 14.33 32.06 32 32.06h16c35.35 0 64-28.71 64-64.12v-63.76c0-35.41-28.65-64.12-64-64.12zM256 32C112.91 32 4.57 151.13 0 288v112c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16V288c0-114.67 93.33-207.8 208-207.82 114.67.02 208 93.15 208 207.82v112c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16V288C507.43 151.13 399.09 32 256 32z">
+            </path>
+          </svg>
+          <div>
+            <h1 class="lg:text-xl font-bold text-black dark:text-white">Online Supoort 24/7</h1>
+            <h1 class="text-gray-400 text-sm">Technical Support 24/7</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Headphone Section -->
+  <div class="min-h-[550px] flex justify-center items-center py-12 ">
+    <div class="container mx-auto w-full px-4 sm:px-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 rounded-3xl" style="background-color: rgb(244, 44, 55);">
+        <!-- grid-1 -->
+        <div class="flex flex-col justify-center p-6 sm:p-8">
+          <p data-aos="fade-down" data-aos-duration="700" data-aos-delay="500" class="text-white text-sm aos-init">30%
+            OFF</p>
+          <h1 data-aos="zoom-out" data-aos-duration="700" data-aos-delay="700"
+            class="text-4xl sm:text-7xl font-bold uppercase text-white aos-init">Fine Smile</h1>
+          <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="900" class="text-white text-sm aos-init">10 Jan
+            to 28 Jan</p>
+
+        </div>
+        <!-- grid-2 -->
+        <div>
+          <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"
+            class="h-full flex items-center aos-init">
+            <img src="./assets/hero.png" alt=""
+              class="w-[250px] md:w-[340px] mx-auto scale-125 drop-shadow-[-10px_10px_12px_rgba(0,0,0,.6)]">
+          </div>
+        </div>
+        <!-- grid-3 -->
+        <div class="flex flex-col justify-center p-6 sm:p-8 gap-4">
+          <p data-aos="zoom-out" data-aos-duration="700" data-aos-delay="500" class="text-white text-xl font-bold">Air
+            Solo Bass</p>
+          <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="700"
+            class=" text-3xl sm:text-5xl font-bold capitalize text-white">Winter Sale</h1>
+          <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="900"
+            class="text-white text-sm tracking-wide leading-5">Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit.Eaque reiciendis</p>
+          <div>
+            <button data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000" data-aos-offset="0"
+              class="bg-white text-[#F42C37] flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-4 rounded-full relative z-10">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product section -->
+  <div class="container mx-auto px-4 sm:px-14">
+    <div class="text-center space-y-2 mb-8">
+      <h1 class="text-black dark:text-white font-bold text-3xl sm:text-4xl">Our Products</h1>
+      <p class="text-gray-400 text-sm">Explore Our Products</p>
+    </div>
+    <div class="mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
+        <!-- card 1 -->
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <div class="relative group">
+            <img src="./assets/p-1-orOZMLhL.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+            <div
+              class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+              <button
+                class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+                to cart</button>
+            </div>
+          </div>
+          <div class="leading-7  text-black dark:text-white">
+            <h2 class="font-semibold">Boat Headphone</h2>
+            <h2 class="font-bold">$120</h2>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <div class="relative group">
+            <img src="./assets/p-2-WFmhXsBS.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+            <div
+              class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+              <button
+                class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+                to cart</button>
+            </div>
+          </div>
+          <div class="leading-7  text-black dark:text-white">
+            <h2 class="font-semibold">Rocky Mountain</h2>
+            <h2 class="font-bold">$420</h2>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+          <div class="relative group">
+            <img src="./assets/p-3-mnrhFOC6.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+            <div
+              class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+              <button
+                class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+                to cart</button>
+            </div>
+          </div>
+          <div class="leading-7  text-black dark:text-white">
+            <h2 class="font-semibold">Goggles</h2>
+            <h2 class="font-bold">$320</h2>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">  
+          <div class="relative group">
+            <img src="./assets/p-1-orOZMLhL.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+            <div
+              class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+              <button
+                class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+                to cart</button>
+            </div>
+          </div>
+          <div class="leading-7  text-black dark:text-white">
+            <h2 class="font-semibold">Printed</h2>
+            <h2 class="font-bold">$220</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- grid-2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
+      <!-- card 1 -->
+      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        <div class="relative group">
+          <img src="./assets/p-5-ExhDW6Bq.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+          <div
+            class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+            <button
+              class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+              to cart</button>
+          </div>
+        </div>
+        <div class="leading-7  text-black dark:text-white">
+          <h2 class="font-semibold">Boat Headphone</h2>
+          <h2 class="font-bold">$120</h2>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <div class="relative group">
+          <img src="./assets/p-9-o2p2J7tc.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+          <div
+            class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+            <button
+              class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+              to cart</button>
+          </div>
+        </div>
+        <div class="leading-7  text-black dark:text-white">
+          <h2 class="font-semibold">Boat Headphone</h2>
+          <h2 class="font-bold">$420</h2>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+        <div class="relative group">
+          <img src="./assets/p-7-Hx9DVjif.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+          <div
+            class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+            <button
+              class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+              to cart</button>
+          </div>
+        </div>
+        <div class="leading-7  text-black dark:text-white">
+          <h2 class="font-semibold">Boat Headphone</h2>
+          <h2 class="font-bold">$320</h2>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+        <div class="relative group">
+          <img src="./assets/p-5-ExhDW6Bq.jpg" alt="" class="h-[180px] w-[260px] object-cover rounded-md">
+          <div
+            class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm   justify-center items-center duration-200 rounded-md  ">
+
+            <button
+              class="bg-[#F42C37] text-white cursor-pointer hover:scale-105 duration-300 py-2 px-8 rounded-full relative z-10">Add
+              to cart</button>
+          </div>
+        </div>
+        <div class="leading-7  text-black dark:text-white">
+          <h2 class="font-semibold">Boat Headphone</h2>
+          <h2 class="font-bold">$120</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Watch section -->
+  <div class="min-h-[550px] flex justify-center items-center py-12 ">
+    <div class="container mx-auto w-full px-4 sm:px-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 rounded-3xl" style="background-color: rgb(45, 204, 111);">
+        <!-- grid-1 -->
+        <div class="flex flex-col justify-center p-6 sm:p-8">
+          <p data-aos="fade-down" data-aos-duration="700" data-aos-delay="500" class="text-white text-sm aos-init">30%
+            OFF</p>
+          <h1 data-aos="zoom-out" data-aos-duration="700" data-aos-delay="700"
+            class="text-4xl sm:text-7xl font-bold uppercase text-white aos-init">Happy Hours</h1>
+          <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="900" class="text-white text-sm aos-init">14 Jan
+            to 28 Jan</p>
+
+        </div>
+        <!-- grid-2 -->
+        <div>
+          <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"
+            class="h-full flex items-center aos-init">
+            <img src="./assets/watch.png" alt=""
+              class="w-[250px] md:w-[340px] mx-auto scale-125 drop-shadow-[-10px_10px_12px_rgba(0,0,0,.6)]">
+          </div>
+        </div>
+        <!-- grid-3 -->
+        <div class="flex flex-col justify-center p-6 sm:p-8 gap-4">
+          <p data-aos="zoom-out" data-aos-duration="700" data-aos-delay="500" class="text-white text-xl font-bold">Smart Solo</p>
+          <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="700"
+            class=" text-3xl sm:text-5xl font-bold capitalize text-white">Winter Sale</h1>
+          <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="900"
+            class="text-white text-sm tracking-wide leading-5">Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit.Eaque reiciendis</p>
+          <div>
+            <button data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000" data-aos-offset="0"
+              class="bg-white text-[#2DCC6F] flex items-center justify-center cursor-pointer hover:scale-105 duration-300 py-2 px-4 rounded-full relative z-10">
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Recent news -->
+   <div class="container mx-auto px-5 sm:px-14">
+    <div class="text-center space-y-2 mb-8">
+      <h1 class="text-black dark:text-white font-bold text-3xl sm:text-4xl">Recent News</h1>
+      <p class="text-gray-400 text-sm">Explore Our Blogs</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- card-1 -->
+      <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+        <div class="top  overflow-hidden rounded-3xl cursor-pointer my-2" style="transition: 0.3s;">
+          <img src="./assets/f1.png" alt="" width="100%" height="100%" class="w-full h-[220px]  rounded-2xl hover:scale-105 object-cover" style="transition: 0.3s;">
+        </div>
+        <div class=" space-y-2">
+          <p  class="text-gray-500 text-xs">Jan 20, 2024 by Dilshad</p>
+          <h2 class="text-black dark:text-white font-bold line-clamp-1">How to choose perfect smartwatch</h2>
+          <p  class="text-gray-400 line-clamp-2 text-sm">minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae laudantium. Porro?</p>
+        </div>
+      </div>
+      <!-- card-2 -->
+      <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+        <div class="top  overflow-hidden rounded-3xl cursor-pointer my-2" style="transition: 0.3s;">
+          <img src="./assets/f2.jpg" alt="" width="100%" height="100%" class=" w-full h-[220px] rounded-2xl hover:scale-105 object-cover" style="transition: 0.3s;">
+        </div>
+        <div class=" space-y-2">
+          <p  class="text-gray-500 text-xs">Jan 20, 2024 by Satya</p>
+          <h2 class="text-black dark:text-white font-bold line-clamp-1">How to choose perfect gadget</h2>
+          <p  class="text-gray-400 line-clamp-2 text-sm">minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae laudantium. Porro?</p>
+        </div>
+      </div>
+      <!-- card-2 -->
+      <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+        <div class="top  overflow-hidden rounded-3xl cursor-pointer my-2" style="transition: 0.3s;">
+          <img src="./assets/f3.jpg" alt="" width="100%" height="100%" class="w-full h-[220px]  rounded-2xl hover:scale-105 object-cover" style="transition: 0.3s;">
+        </div>
+        <div class=" space-y-2">
+          <p  class="text-gray-500 text-xs">Jan 20, 2024 by Sabir</p>
+          <h2  class="text-black dark:text-white font-bold line-clamp-1">How to choose perfect VR headset</h2>
+          <p  class="text-gray-400 line-clamp-2 text-sm">minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae laudantium. Porro?</p>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- footer section -->
+    <div data-aos="flip-right" data-aos-delay="400" data-aos-duration="800">
+      <div class="bg-gray-200 dark:bg-white/10" >
+        <div class="container mx-auto px-4 sm:px-14 mt-14">
+          <div class="grid grid-cols-2 sm:grid-cols-5 place-items-center gap-3 py-8 mt-24 opacity-70">   
+              <img src="./assets/b1.png" alt="" class="w-[80px] dark:invert">
+              <img src="./assets/b2.png" alt="" class="w-[80px] dark:invert">
+              <img src="./assets/b3.png" alt="" class="w-[80px] dark:invert">
+              <img src="./assets/b4.png" alt="" class="w-[80px] dark:invert">
+              <img src="./assets/b6.png" alt="" class="w-[80px] dark:invert">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  <!-- footer -->
+  <footer class="bg-white dark:bg-[#030712]">
+    <div class="container mx-auto px-4 sm:px-14">
+      <div class="grid grid-cols-1 md:grid-cols-3" >
+        <div class="py-8 px-4">
+          <h1 class="text-2xl uppercase font-semibold sm:text-3xl text-[#f42c37] tracking-widest pt-3">eshop</h1>
+          <p class="text-gray-600 dark:text-white/70 pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores alias cum</p>
+          <p class="text-gray-600 mt-4">Made by Ankit Sabariya</p>
+          <a href="https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ" target="_blank" class="inline-block bg-[#DC2934] text-white py-2 px-4 mt-4 text-sm rounded-full">Visit our YouTube Channel</a>
+        </div>
+        <div class="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
+        <div class="py-8 px-4">
+          <h1 class="text-black dark:text-white font-bold text-xl mb-3">Important Links</h1>
+          <ul class="space-y-3">
+            <li><a href="/#" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">Home</a></li>
+            <li><a href="/#about" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">About</a></li>
+            <li><a href="/#contact" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">Contact</a></li>
+            <li><a href="/#blog" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">Blog</a></li>
+          </ul>
+        </div>
+        <div class="py-8 px-4" >
+          <h1 class="text-black dark:text-white font-bold text-xl mb-3">Quick Links</h1>
+          <ul class="space-y-3">
+            <li><a href="/#" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">Home</a></li>
+            <li><a href="/#about" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">About</a></li>
+            <li><a href="/#contact" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">Contact</a></li>
+            <li><a href="/#blog" class="text-gray-600 dark:text-gray-400 hover:dark:text-white hover:text-black duration-300">Blog</a></li>
+          </ul>
+        </div>
+        <div  class="py-8 px-4 col-span-2 sm:col-auto text-black dark:text-white"><h1 class="text-xl font-bold sm:text-left mb-3">Address</h1><div><div class="flex items-center gap-3"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em"  width="1em" xmlns="http://www.w3.org/2000/svg"><path  d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"></path></svg><p>Noida , Uttar Pradesh</p></div><div class="flex items-center gap-3 mt-6"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg><p>+91 1234567890</p></div><div class="flex items-center gap-3 mt-6"><a href="#"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="text-3xl hover:text-primary duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a><a href="#"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-3xl hover:text-primary duration-200" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a><a href="#"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="text-3xl hover:text-primary duration-200" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></div></div></div>
+      </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  const darkModeBtn = document.getElementById('dark-mode-btn');
+  const lightModeBtn = document.getElementById('light-mode-btn');
+
+  const enableDarkMode = () => {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    darkModeBtn.classList.add('hidden');
+    lightModeBtn.classList.remove('hidden');
+  };
+
+  const enableLightMode = () => {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+    lightModeBtn.classList.add('hidden');
+    darkModeBtn.classList.remove('hidden');
+  };
+
+  // Event Listeners for buttons
+  darkModeBtn.addEventListener('click', enableDarkMode);
+  lightModeBtn.addEventListener('click', enableLightMode);
+
+  // Set initial visibility of buttons
+  if (document.documentElement.classList.contains('dark')) {
+    darkModeBtn.classList.add('hidden');
+    lightModeBtn.classList.remove('hidden');
+  } else {
+    lightModeBtn.classList.add('hidden');
+    darkModeBtn.classList.remove('hidden');
+  }
+</script>
+<!-- Defual pc mode off with button -->
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+        }
+      }
+    }
+  }
+
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
+<!-- swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {});
+</script>
+<!-- Aos animation -->
+<script>
+  AOS.init();
+</script>
+</html>
